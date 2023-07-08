@@ -1,8 +1,9 @@
-package com.example.shoppinglistapplication
+package com.example.shoppinglistapplication.repository
 
 import androidx.annotation.WorkerThread
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModel
+import com.example.shoppinglistapplication.data.ShoppingDAO
+import com.example.shoppinglistapplication.data.ShoppingItem
 
 class ShoppingRepository(private val shoppingDAO: ShoppingDAO) {
     val allShoppingList:LiveData<List<ShoppingItem>> = shoppingDAO.getAllShopping()

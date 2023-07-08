@@ -1,8 +1,10 @@
-package com.example.shoppinglistapplication
+package com.example.shoppinglistapplication.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.example.shoppinglistapplication.data.ShoppingItem
+import com.example.shoppinglistapplication.repository.ShoppingRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

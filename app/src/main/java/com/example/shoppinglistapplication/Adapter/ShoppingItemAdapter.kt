@@ -1,4 +1,4 @@
-package com.example.shoppinglistapplication
+package com.example.shoppinglistapplication.Adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.shoppinglistapplication.R
+import com.example.shoppinglistapplication.data.ShoppingItem
+import com.example.shoppinglistapplication.viewmodel.ShoppingViewModel
 
 class ShoppingItemAdapter(private val viewModel: ShoppingViewModel) :
     RecyclerView.Adapter<ShoppingItemAdapter.ShoppingViewHolder>() {

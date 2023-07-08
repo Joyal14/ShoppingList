@@ -1,9 +1,11 @@
-package com.example.shoppinglistapplication
+package com.example.shoppinglistapplication.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.shoppinglistapplication.data.ShoppingDAO
+import com.example.shoppinglistapplication.data.ShoppingItem
 
 @Database(entities = [ShoppingItem::class], version = 1)
 abstract class ShopingDatabase : RoomDatabase() {

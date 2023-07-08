@@ -1,13 +1,16 @@
-package com.example.shoppinglistapplication
+package com.example.shoppinglistapplication.ui
 
 import android.annotation.SuppressLint
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.shoppinglistapplication.ShoppingApplication
+import com.example.shoppinglistapplication.Adapter.ShoppingItemAdapter
+import com.example.shoppinglistapplication.viewmodel.ShoppingViewModel
+import com.example.shoppinglistapplication.viewmodel.ShoppingViewModelFactory
+import com.example.shoppinglistapplication.data.ShoppingItem
 import com.example.shoppinglistapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -40,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         })
         binding.fab.setOnClickListener {
             AddShoppingItemDialog(this,
-            object : AddDialogListener{
+            object : AddDialogListener {
                 override fun onAddButtonClicked(item: ShoppingItem) {
                     viewModel.insert(item)
                 }
